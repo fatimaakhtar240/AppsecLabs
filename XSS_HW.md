@@ -10,4 +10,4 @@ Enter <script>alert(1)</script> in field and click on search button. alert popu[
 <img width="1788" height="509" alt="image" src="https://github.com/user-attachments/assets/4891708b-9eba-4d6a-aaab-8f4299b3bae6" />
 
 
-Recommendation
+Recommendation: Reject coode like <script>alert("XSS")</script>, Only run JavaScript from trusted locations
