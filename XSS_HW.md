@@ -14,7 +14,7 @@
 
 **Screenshot Evidence**
 
-```html
+
 <img width="1788" height="509" alt="image" src="https://github.com/user-attachments/assets/4891708b-9eba-4d6a-aaab-8f4299b3bae6" />
 ```
 
