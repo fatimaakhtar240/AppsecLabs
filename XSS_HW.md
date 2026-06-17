@@ -73,5 +73,28 @@
 
 **Screenshot Evidence**
 
-
 <img width="782" height="669" alt="image" src="https://github.com/user-attachments/assets/4982c961-9d04-4007-9aac-abb1c15c88d7" />
+
+
+---
+
+## Finding 5
+
+# Insecure Direct Object Reference (IDOR) Vulnerability in Chat Transcript Access
+
+| Field                             | Details                                                                                                                                                                                                                                                                                                                                                                      |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**                          | Insecure Direct Object Reference (IDOR) Vulnerability in Chat Transcript Access                                                                                                                                                                                                                                                                                              |
+| **Severity**                      | High                                                                                                                                                                                                                                                                                                                                                                         |
+| **CVSS Score**                    | 10                                                                                                                                                                                                                                                                                                                                                                          |
+| **Description**                   | The application exposes chat transcripts through predictable file names and does not perform adequate authorization checks before granting access. By modifying the transcript identifier, an attacker can access transcripts belonging to other users.                                                                                                                      |
+| **Evidence / Steps to Reproduce** | 1. Navigate to the **Live Chat** functionality.<br>2. Send a message and select **View Transcript**.<br>3. Observe that the transcript is retrieved using a numbered text file (e.g., `2.txt`).<br>4. Modify the file name in the URL to `1.txt`.<br>5. Observe that another user's transcript is returned, containing sensitive information including account credentials.  |
+| **Impact**                        | A successful attacker may gain unauthorized access to sensitive information belonging to other users, including credentials, personal data, or confidential communications. This could lead to account compromise, unauthorized access, and further exploitation of affected user accounts.                                                                                  |
+| **Recommendation**                | Implement server-side authorization checks to ensure users can only access resources they are explicitly permitted to view. Avoid using predictable object identifiers for sensitive resources and enforce access controls on every request. Consider using indirect object references or randomly generated identifiers to reduce the risk of unauthorized resource access. |
+| **Secure Coding Concept** | Server-Side Authorization and Access Control                                                                                                                                                                                                                                                                                                                  |
+
+**Screenshot Evidence**
+<img width="1465" height="502" alt="image" src="https://github.com/user-attachments/assets/37a7739d-918a-4fed-8a6e-375cd4c76488" />
+<img width="1101" height="548" alt="image" src="https://github.com/user-attachments/assets/9287dbbc-9dbb-4d66-ab69-1ed711a61359" />
+
+
